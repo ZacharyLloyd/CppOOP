@@ -24,9 +24,9 @@ protected:
 
 class Monster : public Character 
 {
+public:
 	Monster();
-	Monster(string characterName, int characterHealth,
-		string characterMonsterType, int characterMonsterDamage);
+	Monster(string characterName, int characterHealth, string characterMonsterType, int characterMonsterDamage);
 	string GetMonsterType();
 	void SetMonsterType(string);
 	int GetMonsterDamage();
@@ -40,6 +40,7 @@ private:
 
 class Demon : public Character 
 {
+public:
 	Demon();
 	Demon(string characterName, int characterHealth,
 		string characterSin, int characterDemonDamage);
