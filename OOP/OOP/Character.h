@@ -15,6 +15,7 @@ public:
 	int GetHealth();
 	void SetHealth(int);
 	virtual void Display();
+	virtual void Display(bool moreInfo);
 
 protected:
 	string name;
@@ -32,6 +33,7 @@ public:
 	int GetMonsterDamage();
 	void SetMonsterDamage(int);
 	void Display() override;
+	void Display(bool moreInfo) override;
 
 private:
 	string monsterType;
@@ -49,6 +51,7 @@ public:
 	int GetDemonDamage();
 	void SetDemonDamage(int);
 	void Display() override;
+	void Display(bool moreInfo) override;
 
 private:
 	string sin;

@@ -41,8 +41,16 @@ void Character::SetHealth(int characterHealth)
 }
 void Character::Display() 
 {
-	cout << "The character's name is " << name 
-		<< " with " << health << " health." << endl;
+	cout << "\nThis is a " << clase << endl;
+}
+void Character::Display(bool moreInfo)
+{
+	if (moreInfo)
+	{
+		cout << "\nThis is " << name << endl;
+		cout << "\nThis character is from the " << clase << " class." << endl;
+		cout << "\nThis character has a health pool of " << health << endl;
+	}
 }
 //Monster class
 Monster::Monster() 
@@ -73,10 +81,18 @@ void Monster::SetMonsterDamage(int characterMonsterDamage)
 }
 void Monster::Display()
 {
-	cout << "The Monster's name is " << name
-		<< "which is a  " << monsterType <<
-		" type of monster with the health of "
-		<< health << endl;
+	cout << "\nThis is a " << clase << endl;
+}
+void Monster::Display(bool moreInfo)
+{
+	if (moreInfo)
+	{
+		cout << "\nThis is " << name << endl;
+		cout << "\nThis is a " << clase << " class." << endl;
+		cout << "\nThis character has a health pool of " << health << endl;
+		cout << "\nThis chararacter has a monster type of " << monsterType << endl;
+		cout << "\nThis character has a damage output of " << monsterDamage << endl;
+	}
 }
 //Demon class
 Demon::Demon()
@@ -107,8 +123,16 @@ void Demon::SetDemonDamage(int characterDemonDamage)
 }
 void Demon::Display()
 {
-	cout << "The Demon's name is " << name
-		<< "who punishes thoses who commit the sin of "
-		<< sin << " with a health pool of " << health
-		<< endl;
+	cout << "\nThis is a  " << clase << endl;
+}
+void Demon::Display(bool moreInfo)
+{
+	if (moreInfo)
+	{
+		cout << "\nThis is " << name << endl;
+		cout << "\nThis is a " << clase << " class." << endl;
+		cout << "\nThis character has a health pool of " << health << endl;
+		cout << "\nThis chararacter punishes the sin of " << sin << endl;
+		cout << "\nThis character has a damage output of " << demonDamage << endl;
+	}
 }
