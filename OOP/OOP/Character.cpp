@@ -51,6 +51,10 @@ void Character::Display(bool moreInfo)
 		cout << "\nThis character is from the " << clase << " class." << endl;
 		cout << "\nThis character has a health pool of " << health << endl;
 	}
+	else
+	{
+		cout << "\nThis is a  " << clase << endl;
+	}
 }
 //Monster class
 Monster::Monster() 
@@ -93,6 +97,10 @@ void Monster::Display(bool moreInfo)
 		cout << "\nThis chararacter has a monster type of " << monsterType << endl;
 		cout << "\nThis character has a damage output of " << monsterDamage << endl;
 	}
+	else
+	{
+		cout << "\nThis is a  " << clase << endl;
+	}
 }
 //Demon class
 Demon::Demon()
@@ -134,5 +142,9 @@ void Demon::Display(bool moreInfo)
 		cout << "\nThis character has a health pool of " << health << endl;
 		cout << "\nThis chararacter punishes the sin of " << sin << endl;
 		cout << "\nThis character has a damage output of " << demonDamage << endl;
+	}
+	else
+	{
+		cout << "\nThis is a  " << clase << endl;
 	}
 }
