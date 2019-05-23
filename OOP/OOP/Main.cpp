@@ -52,14 +52,27 @@ void main()
 			cin >> inputString2;
 			cout << "The demon's damage outpt: ";
 			cin >> inputValue2;
+			demonPointer = new Demon();
+			demonPointer->SetName(inputString1);
+			demonPointer->SetHealth(inputValue1);
+			demonPointer->SetSin(inputString2);
+			demonPointer->SetDemonDamage(inputValue2);
+			characterList.push_back(demonPointer);
 			break;
 		case 3:
 			break;
 		}
 	} while (choice != 99);
+
+	if (characterList.size()) reprintCharacter();
 	system("pause");
 }
 void reprintCharacter()
 {
 	cout << "\nThese are the characters you created: " << endl;
+	for (unsigned int i = 0; i < characterList.size(); i++)
+	{
+		characterPointer = characterList[i];
+		characterPointer->Display();
+	}
 }
