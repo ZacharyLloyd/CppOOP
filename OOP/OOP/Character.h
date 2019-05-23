@@ -7,9 +7,11 @@ class Character
 {
 public:
 	Character();
-	Character(string characterName, int characterHealth);
+	Character(string characterName, string characterClass, int characterHealth);
 	string GetName();
 	void SetName(string);
+	string GetClass();
+	void SetClass(string);
 	int GetHealth();
 	void SetHealth(int);
 	virtual void Display();
@@ -17,12 +19,14 @@ public:
 protected:
 	string name;
 	int health;
+	string clase;
 };
 
 class Monster : public Character 
 {
 	Monster();
-	Monster(string characterName, int characterHealth, string characterMonsterType, int characterMonsterDamage);
+	Monster(string characterName, int characterHealth,
+		string characterMonsterType, int characterMonsterDamage);
 	string GetMonsterType();
 	void SetMonsterType(string);
 	int GetMonsterDamage();
@@ -30,14 +34,15 @@ class Monster : public Character
 	void Display() override;
 
 private:
-	string typeOfMonster;
+	string monsterType;
 	int monsterDamage;
 };
 
 class Demon : public Character 
 {
 	Demon();
-	Demon(string characterName, int characterHealth, string characterSin, int characterDemonDamage);
+	Demon(string characterName, int characterHealth,
+		string characterSin, int characterDemonDamage);
 	string GetSin();
 	void SetSin(string);
 	int GetDemonDamage();

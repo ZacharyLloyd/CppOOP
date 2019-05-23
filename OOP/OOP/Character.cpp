@@ -1,14 +1,15 @@
-#include "Character.h"
 #include <iostream>
 #include <string>
 #include <iomanip>
+#include "Character.h"
+
 using namespace std;
 
 //Character class
 Character::Character()
 {
 }
-Character::Character(string characterName, int characterHealth) 
+Character::Character(string characterName, string characterClass, int characterHealth) 
 {
 	name = characterName;
 	health = characterHealth;
@@ -21,6 +22,14 @@ string Character::GetName()
 void Character::SetName(string characterName) 
 {
 	name = characterName;
+}
+string Character::GetClass()
+{
+	return clase;
+}
+void Character::SetClass(string characterClass)
+{
+	clase = characterClass;
 }
 int Character::GetHealth() 
 {
@@ -43,15 +52,16 @@ Monster::Monster(string characterName, int characterHealth, string characterMons
 {
 	name = characterName;
 	health = characterHealth;
-	typeOfMonster = characterMonsterType;
+	monsterType = characterMonsterType;
+	monsterDamage = characterMonsterDamage;
 }
 string Monster::GetMonsterType() 
 {
-	return typeOfMonster;
+	return monsterType;
 }
 void Monster::SetMonsterType(string characterMonsterType) 
 {
-	typeOfMonster = characterMonsterType;
+	monsterType = characterMonsterType;
 }
 int Monster::GetMonsterDamage()
 {
@@ -64,7 +74,7 @@ void Monster::SetMonsterDamage(int characterMonsterDamage)
 void Monster::Display()
 {
 	cout << "The Monster's name is " << name
-		<< "which is a  " << typeOfMonster <<
+		<< "which is a  " << monsterType <<
 		" type of monster with the health of "
 		<< health << endl;
 }
@@ -77,6 +87,7 @@ Demon::Demon(string characterName, int characterHealth, string characterSin, int
 	name = characterName;
 	health = characterHealth;
 	sin = characterSin;
+	demonDamage = characterDemonDamage;
 }
 string Demon::GetSin()
 {
