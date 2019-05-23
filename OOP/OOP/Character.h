@@ -2,7 +2,10 @@
 #define CHARACTER_H
 #include <string>
 using namespace std;
+/*This is the header file that declares all of the methods and properties
+used in the classes that I have created for this program*/
 
+//Character class (the parent class)
 class Character
 {
 public:
@@ -22,7 +25,7 @@ protected:
 	int health;
 	string clase;
 };
-
+//Monster class (child class of Character)
 class Monster : public Character 
 {
 public:
@@ -39,7 +42,7 @@ private:
 	string monsterType;
 	int monsterDamage;
 };
-
+//Demon class (child class of Character)
 class Demon : public Character 
 {
 public:

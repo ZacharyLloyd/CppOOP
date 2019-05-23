@@ -3,12 +3,14 @@
 #include <vector>
 #include <algorithm>
 #include "Character.h"
+//This is the main cpp file where the magic actually happens by using the class I have created
 using namespace std;
 void reprintCharacter();
 
 vector<Character *> characterList;
 Character * characterPointer;
 
+//Main
 void main()
 {
 	string inputClass, inputString1, inputString2;
@@ -71,6 +73,8 @@ void main()
 	if (characterList.size()) reprintCharacter();
 	system("pause");
 }
+/*Used to reprint out all the data taken in from the user
+to show them what they have created in this program*/
 void reprintCharacter()
 {
 	cout << "\nThese are the characters you created: " << endl;

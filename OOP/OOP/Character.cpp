@@ -2,7 +2,8 @@
 #include <string>
 #include <iomanip>
 #include "Character.h"
-
+/*This is the cpp file for the header file Character where
+ the code for the methods that are in the header file are stored*/
 using namespace std;
 
 //Character class
