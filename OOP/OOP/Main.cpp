@@ -11,7 +11,7 @@ Character * characterPointer;
 
 void main()
 {
-	string inputString1, inputString2;
+	string inputClass, inputString1, inputString2;
 	int inputValue1, inputValue2;
 	int choice;
 	Monster * monsterPointer;
@@ -28,6 +28,7 @@ void main()
 		switch (choice)
 		{
 		case 1:
+			inputClass = "Monster";
 			cout << "Monster name: ";
 			cin >> inputString1;
 			cout << "Monster health: ";
@@ -38,12 +39,14 @@ void main()
 			cin >> inputValue2;
 			monsterPointer = new Monster();
 			monsterPointer->SetName(inputString1);
+			monsterPointer->SetClass(inputClass);
 			monsterPointer->SetHealth(inputValue1);
 			monsterPointer->SetMonsterType(inputString2);
 			monsterPointer->SetMonsterDamage(inputValue2);
 			characterList.push_back(monsterPointer);
 			break;
 		case 2:
+			inputClass = "Demon";
 			cout << "Demon name: ";
 			cin >> inputString1;
 			cout << "Demon health: ";
@@ -54,6 +57,7 @@ void main()
 			cin >> inputValue2;
 			demonPointer = new Demon();
 			demonPointer->SetName(inputString1);
+			demonPointer->SetClass(inputClass);
 			demonPointer->SetHealth(inputValue1);
 			demonPointer->SetSin(inputString2);
 			demonPointer->SetDemonDamage(inputValue2);
@@ -73,6 +77,6 @@ void reprintCharacter()
 	for (unsigned int i = 0; i < characterList.size(); i++)
 	{
 		characterPointer = characterList[i];
-		characterPointer->Display();
+		characterPointer->Display(true);
 	}
 }

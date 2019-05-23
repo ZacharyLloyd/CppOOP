@@ -60,12 +60,13 @@ void Character::Display(bool moreInfo)
 Monster::Monster() 
 {
 }
-Monster::Monster(string characterName, int characterHealth, string characterMonsterType, int characterMonsterDamage) 
+Monster::Monster(string characterName, string characterClass, int characterHealth, string characterMonsterType, int characterMonsterDamage) 
 {
 	name = characterName;
 	health = characterHealth;
 	monsterType = characterMonsterType;
 	monsterDamage = characterMonsterDamage;
+	clase = characterClass;
 }
 string Monster::GetMonsterType() 
 {
@@ -106,12 +107,13 @@ void Monster::Display(bool moreInfo)
 Demon::Demon()
 {
 }
-Demon::Demon(string characterName, int characterHealth, string characterSin, int characterDemonDamage) 
+Demon::Demon(string characterName, string characterClass, int characterHealth, string characterSin, int characterDemonDamage) 
 {
 	name = characterName;
 	health = characterHealth;
 	sin = characterSin;
 	demonDamage = characterDemonDamage;
+	clase = characterClass;
 }
 string Demon::GetSin()
 {

@@ -27,7 +27,7 @@ class Monster : public Character
 {
 public:
 	Monster();
-	Monster(string characterName, int characterHealth, string characterMonsterType, int characterMonsterDamage);
+	Monster(string characterName, string characterClass, int characterHealth, string characterMonsterType, int characterMonsterDamage);
 	string GetMonsterType();
 	void SetMonsterType(string);
 	int GetMonsterDamage();
@@ -44,8 +44,7 @@ class Demon : public Character
 {
 public:
 	Demon();
-	Demon(string characterName, int characterHealth,
-		string characterSin, int characterDemonDamage);
+	Demon(string characterName, string characterClass, int characterHealth, string characterSin, int characterDemonDamage);
 	string GetSin();
 	void SetSin(string);
 	int GetDemonDamage();
